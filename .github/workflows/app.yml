@@ -15,9 +15,9 @@ jobs:
     - name: Extract Ngrok File.
       run: Expand-Archive ngrok.zip
     - name: Connect Ngrok.
-      run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
+      run: .\ngrok\ngrok.exe authtoken 2ta49uuzv3qAWXBPSnx9bD8zIiG_6x6FzKshcxmHvLmHpFw8b
       env:
-        NGROK_AUTH_TOKEN: ${{ 2ta27dLPs0sTNb0NLJjR1RgVuAW_EUTw5zpY8piE6zq4r7ko }}
+        NGROK_AUTH_TOKEN: ${{ 2ta49uuzv3qAWXBPSnx9bD8zIiG_6x6FzKshcxmHvLmHpFw8b }}
     - name: SannRDP.
       run: |
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
