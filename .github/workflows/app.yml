@@ -1,4 +1,4 @@
-name: Har Pito
+name: SannSevenfold
 on: workflow_dispatch
 jobs:
   build:
@@ -17,8 +17,8 @@ jobs:
     - name: Connect Ngrok.
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
       env:
-        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
-    - name: Windows10 RDP.
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN4 }}
+    - name: SannRDP.
       run: |
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
